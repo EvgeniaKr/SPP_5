@@ -25,7 +25,14 @@ namespace StringFormatter
             {
                 substrings[i] = formatSubstring(substrings[i], target);
             }
-            throw new NotImplementedException();
+            string result = string.Join("{", substrings);
+            if (template.IndexOf("{{") == 0)
+                result = "{" + result;
+
+            if (template.LastIndexOf("{{") == template.Length - 2)
+                result = result + "{";
+            result = result.Replace("}}", "}");
+            return result;
         }
         private bool Correct(string _template)
         {

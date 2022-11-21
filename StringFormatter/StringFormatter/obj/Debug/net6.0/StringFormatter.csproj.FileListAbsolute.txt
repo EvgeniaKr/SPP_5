@@ -1,0 +1,12 @@
+C:\mywork\SPPlabs\SPP_5\StringFormatter\StringFormatter\bin\Debug\net6.0\StringFormatter.deps.json
+C:\mywork\SPPlabs\SPP_5\StringFormatter\StringFormatter\bin\Debug\net6.0\StringFormatter.dll
+C:\mywork\SPPlabs\SPP_5\StringFormatter\StringFormatter\bin\Debug\net6.0\StringFormatter.pdb
+C:\mywork\SPPlabs\SPP_5\StringFormatter\StringFormatter\obj\Debug\net6.0\StringFormatter.csproj.AssemblyReference.cache
+C:\mywork\SPPlabs\SPP_5\StringFormatter\StringFormatter\obj\Debug\net6.0\StringFormatter.GeneratedMSBuildEditorConfig.editorconfig
+C:\mywork\SPPlabs\SPP_5\StringFormatter\StringFormatter\obj\Debug\net6.0\StringFormatter.AssemblyInfoInputs.cache
+C:\mywork\SPPlabs\SPP_5\StringFormatter\StringFormatter\obj\Debug\net6.0\StringFormatter.AssemblyInfo.cs
+C:\mywork\SPPlabs\SPP_5\StringFormatter\StringFormatter\obj\Debug\net6.0\StringFormatter.csproj.CoreCompileInputs.cache
+C:\mywork\SPPlabs\SPP_5\StringFormatter\StringFormatter\obj\Debug\net6.0\StringFormatter.dll
+C:\mywork\SPPlabs\SPP_5\StringFormatter\StringFormatter\obj\Debug\net6.0\refint\StringFormatter.dll
+C:\mywork\SPPlabs\SPP_5\StringFormatter\StringFormatter\obj\Debug\net6.0\StringFormatter.pdb
+C:\mywork\SPPlabs\SPP_5\StringFormatter\StringFormatter\obj\Debug\net6.0\ref\StringFormatter.dll
