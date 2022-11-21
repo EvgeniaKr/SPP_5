@@ -85,7 +85,7 @@ namespace StringFormatter
             var field = str.Substring(startId, endId - startId);
             field = field.Trim(' ');
 
-            var value = reflection.GetPropertyValue(obj, field);
+            var value = reflection.GetValue(obj, field);
 
             string result = str;
             if (value != null)
