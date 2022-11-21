@@ -9,9 +9,11 @@ namespace StringFormatter
     public class StringFormatter : IStringFormatter
     {
         public static readonly StringFormatter Shared = new StringFormatter();
+        private Reflection reflection;
 
         public StringFormatter()
         {
+            reflection = new Reflection();
         }
 
         public string Format(string template, object target)
@@ -70,13 +72,36 @@ namespace StringFormatter
             var resultedString = template;
             while (startId != endId)
             {
-                int SubstringId=0;
+                int SubstringId;
+                resultedString = Change(target, resultedString, startId, endId, out SubstringId);
                 Substring(resultedString, SubstringId, out startId, out endId);
             }
 
             return resultedString;
         }
-        
+        private string Change(object obj, string str, int startId, int endId, out int endOfChangedSubstring)
+        {
+            //get string in brackets;
+            var field = str.Substring(startId, endId - startId);
+            field = field.Trim(' ');
+
+            var value = reflection.GetPropertyValue(obj, field);
+
+            string result = str;
+            if (value != null)
+            {
+                var subStringLength = endId - startId + 2;
+                string replacedString = str.Substring(startId - 1, subStringLength);
+                result = str.Replace(replacedString, value.ToString());
+                endOfChangedSubstring = endId - (subStringLength - value.ToString().Length - 1);
+            }
+            else
+            {
+                endOfChangedSubstring = endId;
+            }
+
+            return result;
+        }
         private void Substring(string str, int startedFrom, out int startId, out int endId)
         {
             bool isFoundBoundaries = false;
